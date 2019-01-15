@@ -1,0 +1,475 @@
+$main-font: 'Montserrat', sans-serif;
+$printed-font: 'PT Sans', sans-serif;
+$user-input-font: 'PT Mono', monospace;
+
+@import "~bootstrap/scss/bootstrap";
+
+body {
+  margin: 0;
+  font-family: $main-font;
+}
+
+h1, p {
+  margin: 0;
+}
+
+img {
+  width: 100%;
+}
+a{
+  &:hover{
+    text-decoration: none;
+  }
+}
+.mainText {
+  opacity: 0.7;
+  font-size: 14px;
+  color: #000000;
+  text-align: center;
+  line-height: 20px;
+  font-family: $user-input-font;
+}
+
+.blackTitle {
+  font-family: $main-font;
+  font-weight: bolder;
+  font-size: 32px;
+  color: #000000;
+  line-height: 36px;
+}
+
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: #EFF1F2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 100vh;
+  .portfolioImg {
+    width: 340px;
+    height: 340px;
+    background-image: url("../img/myPhoto.jpg");
+    border-radius: 50%;
+    margin-bottom: 36px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .mainTitle {
+    font-size: 40px;
+    color: #000000;
+    text-align: center;
+    line-height: 44px;
+    font-family: $main-font;
+    font-weight: bolder;
+    margin-bottom: 8px;
+  }
+
+  .contactBtn {
+    width: 280px;
+    color: white;
+    background: #0059D9;
+    border-radius: 4px;
+    height: 52px;
+    border: none;
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
+    margin-top: 20px;
+    font-family: $main-font;
+    font-weight: bolder;
+    transition: 0.3s all ease-in-out;
+    &:hover {
+      background: black;
+      transition: 0.3s all ease-in-out;
+      cursor: pointer;
+    }
+    &:active {
+      opacity: 0.7;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.mainBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  .mainBlockContent {
+    width: 700px;
+    margin: 100px 0;
+  }
+}
+
+.expectBlock {
+  background-color: white;
+
+  .expectRow {
+    margin-top: 16px;
+    .expectItem {
+      .expectTitle {
+        font-size: 18px;
+        color: #0059D9;
+        line-height: 24px;
+        font-weight: bolder;
+        padding: 14px 0;
+        border-top: 1px solid #D2D9E2;
+        &:after {
+          content: '+';
+          float: right;
+          font-size: 36px;
+          font-weight: 300;
+          display: block;
+          transition: 0.3s all ease-in-out;
+        }
+        &:hover{
+          cursor: pointer;
+          transition: 0.3s all ease-in-out;
+          color: black;
+          &:after {
+            content: '+';
+            float: right;
+            font-size: 36px;
+            font-weight: 300;
+            transform: rotate(45deg);
+            display: block;
+            transition: 0.3s all ease-in-out;
+          }
+        }
+        &:active{
+          opacity: 0.7;
+        }
+      }
+      .expectText{
+        text-align: left;
+        margin: 0 0 20px;
+        max-width: 520px;
+        display: none;
+        transition: 0.3s all ease-in-out;
+      }
+      .expectTitle:hover + .expectText {
+        display: block;
+        transition: 0.3s all ease-in-out;
+      }
+    }
+  }
+
+}
+
+.worksBlock {
+  background: #25282A;
+  .whiteTitle {
+    font-size: 32px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 36px;
+    font-weight: bolder;
+  }
+  .worksBlocktext {
+    opacity: 0.7;
+    font-family: $user-input-font;
+    font-size: 14px;
+    color: #FFFFFF;
+    text-align: center;
+    line-height: 20px;
+    font-weight: bolder;
+  }
+  .worksRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin-top: 80px;
+    .workItem {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 80px;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      .workTitle {
+        font-size: 18px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 24px;
+        font-weight: bolder;
+      }
+      .workLink {
+        font-family: $user-input-font;
+        font-size: 14px;
+        color: #71ABFF;
+        text-align: center;
+        line-height: 20px;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          color: white;
+          transition: 0.3s all ease-in-out;
+          cursor: pointer;
+        }
+        &:active {
+          opacity: 0.7;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      .workImg {
+        width: 100%;
+        margin: 20px 0;
+        img {
+          border-radius: 8px;
+        }
+      }
+      .workInfo {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        .workText {
+          font-family: $printed-font;
+          font-size: 14px;
+          color: #FFFFFF;
+          line-height: 20px;
+          max-width: 520px;
+        }
+        .workSwitcher {
+          display: flex;
+          .switchCircle {
+            width: 8px;
+            height: 8px;
+            background-color: #71ABFF;
+            border-radius: 50%;
+            margin: 4px;
+            transition: 0.3s all ease-in-out;
+            &:hover {
+              background-color: white;
+              transition: 0.3s all ease-in-out;
+              cursor: pointer;
+            }
+            &:active {
+              background-color: transparent;
+              border: 1px solid #71ABFF;
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+          .switchCircleActive {
+            width: 8px;
+            height: 8px;
+            background-color: transparent;
+            border: 1px solid #71ABFF;
+            border-radius: 50%;
+            margin: 4px;
+          }
+        }
+      }
+    }
+  }
+}
+
+footer {
+  background-color: #EFF1F2;
+  .contactBlock {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    .socials {
+      width: 30%;
+      margin: 16px auto 20px;
+      .socialLink {
+        color: white;
+        border-radius: 50%;
+        transition: 0.3s all ease-in-out;
+
+        i {
+          font-size: 24px;
+        }
+      }
+      .fbLink {
+        background-color: #395A99;
+        padding: 16px 18px 12px;
+        margin-right: 16px;
+        &:hover {
+          background-color: #2d487a;
+          transition: 0.3s all ease-in-out;
+          cursor: pointer;
+        }
+        &:active {
+          opacity: 0.7;
+        }
+      }
+      .twitterLink {
+        background-color: #51ADEF;
+        padding: 16px 12px 12px;
+        margin-right: 16px;
+        &:hover {
+          background-color: #408abf;
+          transition: 0.3s all ease-in-out;
+          cursor: pointer;
+        }
+        &:active {
+          opacity: 0.7;
+        }
+      }
+      .telegramLink {
+        background-color: #2CA5E0;
+        padding: 16px 15px 12px 12px;
+        &:hover {
+          background-color: #2384b3;
+          transition: 0.3s all ease-in-out;
+          cursor: pointer;
+        }
+        &:active {
+          opacity: 0.7;
+        }
+      }
+    }
+    .contactForm {
+      margin-top: 40px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      .contactFormInputs {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+        .contactFormInput {
+          width: 340px;
+          height: 36px;
+          border-radius: 4px;
+          border: 1px solid rgba(31, 64, 111, 0.20);
+          padding: 0 12px;
+          &:focus{
+            border: 1px solid #0059D9;
+            outline: none;
+          }
+        }
+
+      }
+      .contactFormTextarea {
+        width: 700px;
+        height: 136px;
+        border-radius: 4px;
+        border: 1px solid rgba(31, 64, 111, 0.20);
+        resize: none;
+        margin-bottom: 20px;
+        padding: 6px 12px;
+        &:focus{
+          border: 1px solid #0059D9;
+          outline: none;
+        }
+      }
+      .addTTBtn {
+        margin-bottom: 20px;
+      }
+
+      .fileUploadBtn {
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+        margin-bottom: 20px;
+        background: transparent;
+        border: 1px solid rgba(31, 64, 111, 0.20);
+        border-radius: 4px;
+        font-size: 16px;
+        color: #0059D9;
+        line-height: 20px;
+        font-family: $printed-font;
+        padding: 10px 0;
+        height: 36px;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          color: black;
+          transition: 0.3s all ease-in-out;
+          cursor: pointer;
+        }
+        &:active {
+          opacity: 0.7;
+        }
+        input[type="file"] {
+          display: none;
+        }
+        label {
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          cursor: pointer;
+        }
+        span {
+          line-height: 36px;
+        }
+      }
+      .submitFormBtn {
+        background: #0059D9;
+        border-radius: 4px;
+        font-size: 18px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 24px;
+        font-weight: bolder;
+        border: none;
+        padding: 14px 0;
+        transition: 0.3s all ease-in-out;
+        &:hover {
+          background: black;
+          transition: 0.3s all ease-in-out;
+          cursor: pointer;
+        }
+        &:active {
+          opacity: 0.7;
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+      ::-webkit-input-placeholder {
+        opacity: 0.3;
+        font-family: $printed-font;
+        font-size: 16px;
+        color: #000000;
+        line-height: 20px;
+      }
+      ::-moz-placeholder {
+        opacity: 0.3;
+        font-family: $printed-font;
+        font-size: 16px;
+        color: #000000;
+        line-height: 20px;
+      }
+      /* Firefox 19+ */
+      :-moz-placeholder {
+        opacity: 0.3;
+        font-family: $printed-font;
+        font-size: 16px;
+        color: #000000;
+        line-height: 20px;
+      }
+      /* Firefox 18- */
+      :-ms-input-placeholder {
+        opacity: 0.3;
+        font-family: $printed-font;
+        font-size: 16px;
+        color: #000000;
+        line-height: 20px;
+      }
+    }
+  }
+}
