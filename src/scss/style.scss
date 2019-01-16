@@ -16,11 +16,13 @@ h1, p {
 img {
   width: 100%;
 }
-a{
-  &:hover{
+
+a {
+  &:hover {
     text-decoration: none;
   }
 }
+
 .mainText {
   opacity: 0.7;
   font-size: 14px;
@@ -36,6 +38,7 @@ a{
   font-size: 32px;
   color: #000000;
   line-height: 36px;
+  text-align: center;
 }
 
 .wrapper {
@@ -105,8 +108,7 @@ header {
   align-items: center;
   align-content: center;
   .mainBlockContent {
-    width: 700px;
-    margin: 100px 0;
+    margin: 100px 150px;
   }
 }
 
@@ -131,7 +133,7 @@ header {
           display: block;
           transition: 0.3s all ease-in-out;
         }
-        &:hover{
+        &:hover {
           cursor: pointer;
           transition: 0.3s all ease-in-out;
           color: black;
@@ -145,11 +147,11 @@ header {
             transition: 0.3s all ease-in-out;
           }
         }
-        &:active{
+        &:active {
           opacity: 0.7;
         }
       }
-      .expectText{
+      .expectText {
         text-align: left;
         margin: 0 0 20px;
         max-width: 520px;
@@ -174,14 +176,13 @@ header {
     line-height: 36px;
     font-weight: bolder;
   }
-  .worksBlocktext {
+  .worksBlockText {
     opacity: 0.7;
     font-family: $user-input-font;
     font-size: 14px;
     color: #FFFFFF;
     text-align: center;
     line-height: 20px;
-    font-weight: bolder;
   }
   .worksRow {
     display: flex;
@@ -197,7 +198,7 @@ header {
       align-items: center;
       align-content: center;
       margin-bottom: 80px;
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
       }
       .workTitle {
@@ -212,6 +213,8 @@ header {
         font-size: 14px;
         color: #71ABFF;
         text-align: center;
+        max-width: 280px;
+        overflow: hidden;
         line-height: 20px;
         transition: 0.3s all ease-in-out;
         &:hover {
@@ -288,57 +291,63 @@ footer {
     justify-content: center;
     align-items: center;
     align-content: center;
-    .socials {
-      width: 30%;
-      margin: 16px auto 20px;
-      .socialLink {
-        color: white;
-        border-radius: 50%;
-        transition: 0.3s all ease-in-out;
+    .socialsContainer {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin: 16px 0 30px;
+      .socials {
+        min-width: 190px;
+        .socialLink {
+          color: white;
+          border-radius: 50%;
+          transition: 0.3s all ease-in-out;
 
-        i {
-          font-size: 24px;
+          i {
+            font-size: 24px;
+          }
         }
-      }
-      .fbLink {
-        background-color: #395A99;
-        padding: 16px 18px 12px;
-        margin-right: 16px;
-        &:hover {
-          background-color: #2d487a;
-          transition: 0.3s all ease-in-out;
-          cursor: pointer;
+        .fbLink {
+          background-color: #395A99;
+          padding: 16px 18px 12px;
+          margin-right: 16px;
+          &:hover {
+            background-color: #2d487a;
+            transition: 0.3s all ease-in-out;
+            cursor: pointer;
+          }
+          &:active {
+            opacity: 0.7;
+          }
         }
-        &:active {
-          opacity: 0.7;
+        .twitterLink {
+          background-color: #51ADEF;
+          padding: 16px 12px 12px;
+          margin-right: 16px;
+          &:hover {
+            background-color: #408abf;
+            transition: 0.3s all ease-in-out;
+            cursor: pointer;
+          }
+          &:active {
+            opacity: 0.7;
+          }
         }
-      }
-      .twitterLink {
-        background-color: #51ADEF;
-        padding: 16px 12px 12px;
-        margin-right: 16px;
-        &:hover {
-          background-color: #408abf;
-          transition: 0.3s all ease-in-out;
-          cursor: pointer;
-        }
-        &:active {
-          opacity: 0.7;
-        }
-      }
-      .telegramLink {
-        background-color: #2CA5E0;
-        padding: 16px 15px 12px 12px;
-        &:hover {
-          background-color: #2384b3;
-          transition: 0.3s all ease-in-out;
-          cursor: pointer;
-        }
-        &:active {
-          opacity: 0.7;
+        .telegramLink {
+          background-color: #2CA5E0;
+          padding: 16px 15px 12px 12px;
+          &:hover {
+            background-color: #2384b3;
+            transition: 0.3s all ease-in-out;
+            cursor: pointer;
+          }
+          &:active {
+            opacity: 0.7;
+          }
         }
       }
     }
+
     .contactForm {
       margin-top: 40px;
       display: flex;
@@ -349,12 +358,12 @@ footer {
         justify-content: space-between;
         margin-bottom: 20px;
         .contactFormInput {
-          width: 340px;
+          width: 49%;
           height: 36px;
           border-radius: 4px;
           border: 1px solid rgba(31, 64, 111, 0.20);
           padding: 0 12px;
-          &:focus{
+          &:focus {
             border: 1px solid #0059D9;
             outline: none;
           }
@@ -362,14 +371,13 @@ footer {
 
       }
       .contactFormTextarea {
-        width: 700px;
         height: 136px;
         border-radius: 4px;
         border: 1px solid rgba(31, 64, 111, 0.20);
         resize: none;
         margin-bottom: 20px;
         padding: 6px 12px;
-        &:focus{
+        &:focus {
           border: 1px solid #0059D9;
           outline: none;
         }
@@ -469,6 +477,93 @@ footer {
         font-size: 16px;
         color: #000000;
         line-height: 20px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    .portfolioImg {
+      width: 250px;
+      height: 250px;
+    }
+    .mainTitle {
+      font-size: 32px;
+    }
+    .mainText {
+      max-width: 280px;
+    }
+  }
+  .mainBlock {
+    align-items: inherit;
+    .mainBlockContent {
+      margin: 52px 40px;
+    }
+  }
+  .worksBlock {
+    .worksRow {
+      margin-top: 60px;
+      .workItem {
+        margin-bottom: 60px;
+        &:last-child {
+          margin-bottom: 0;
+        }
+        .workInfo {
+          flex-direction: column-reverse;
+          align-items: center;
+          .workSwitcher {
+            margin: 0 0 16px;
+          }
+        }
+      }
+    }
+  }
+  footer {
+    .contactBlock {
+      .contactForm {
+        .contactFormInputs {
+          flex-direction: column;
+          margin-bottom: 0;
+          .contactFormInput{
+            width: 100%;
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 320px) {
+  header {
+    .portfolioImg {
+      width: 205px;
+      height: 205px;
+    }
+  }
+  .mainBlock {
+    align-items: inherit;
+    .mainBlockContent {
+      margin: 52px 20px;
+    }
+  }
+  footer {
+    .contactBlock {
+      .contactForm {
+        margin-top: 20px;
+        .contactFormInputs {
+          .contactFormInput{
+            width: 100%;
+            margin-bottom: 16px;
+          }
+        }
+        .contactFormTextarea{
+          margin-bottom: 16px;
+        }
+        .fileUploadBtn{
+          margin-bottom: 16px;
+        }
       }
     }
   }
